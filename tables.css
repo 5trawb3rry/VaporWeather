@@ -1,0 +1,149 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.sidebar {
+    width: 150px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    border: 2px solid #6d6471;
+    border-radius: 1px;
+    backdrop-filter: blur(15px);
+}
+
+.sidebar a {
+    padding: 15px;
+    font-family: Helvetica;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.profile-icon {
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+}
+
+.profile-icon img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+
+.mainContent {
+    flex-direction: row;
+    flex: 1;  
+    display: flex;
+    justify-content: flex-start;  
+    align-items: flex-start;  
+    margin-left: 200px; /* Prevent overlapping with the sidebar */
+}
+
+.sidebar label {
+    font-size: large;
+    padding: 10px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    color: white;
+    width: 950px;
+    height: 600px;
+    margin-top: 70px;
+    border: none;
+}
+
+.grid-item {
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0e2548; 
+    color: white;
+    text-align: center;
+}
+
+.input-field 
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0e2548;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black; 
+}
+
+
+
+.table .grid-item:nth-child(2) 
+{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: flex-start; 
+}
+
+
+.table .grid-item:nth-child(2) .input-button-wrapper
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    width: 100%; 
+}
+
+
+.table .grid-item:nth-child(2) input
+{
+    flex-grow: 1; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;
+}
+
+
+.table .grid-item:nth-child(2) button 
+{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;
+    cursor: pointer;
+}
+
+.table .grid-item:nth-child(2) textarea 
+{
+    width: 95%; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;
+    resize: vertical; 
+}
