@@ -5,16 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VaporWeather™</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class = "sidebar" id = "sidebar">
+    <div class="sidebar" id="sidebar">
         <label><strong>VaporWeather™</strong></label>
         <a href="#dashboard">Dashboard</a>
-        <a href="#tables">Tables</a>
+        <a href="tables.html">Tables</a>
     </div>
 
-    <div class = "mainContent">
-       <input type = text class = "locationInput" placeholder="City..">
+    <div class="mainContent">
+
+        <div class="profile-icon">
+            <img src="assets/pfp.jpg" alt="User Profile Picture">
+        </div>
+
+        <div class="input">
+            <input type="text" class="locationInput" id="locationInput" placeholder="Enter City...">
+            <button class="locationButton" id="locationButton">Search</button>
+        </div>
+
+        <div class="weatherDisp">
+            <div class="imgDisp">
+                <img src="assets/temp.jpg" alt="Weather Icon">
+            </div>
+        
+            <div class="weatherDetails">
+                <h3 class="temperature">Please search for a valid location to get started!</h3>
+                <p class="description"></p>
+                <p class="humidity"></p>
+                <p class="wind"></p>
+            </div>
+        </div>
+        
+        <div class="five-day-forecast" id="fiveDayForecast">
+            
+            
+        </div>
+        
+        <div class="sortingbutton">
+            <button class="locationButton" id="ascButton">Ascending</button>
+            <button class="locationButton" id="descButton">Descending</button>
+            <button class="locationButton" id="wrButton">Without Rain</button>
+        </div>
+        
+
+        <div class = "charts" id = "charts">
+            <div class="grid-item">Vertical Bar chart</div>
+            <div class="grid-item">Donut chart</div>
+            <div class="grid-item">Line chart</div>
+        </div>
+
+
     </div>
+    <script src = "script.js"></script>
 </body>
 </html>
