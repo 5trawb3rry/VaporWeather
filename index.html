@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VaporWeather™</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VaporWeather™</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    
 <body>
     <div class="sidebar" id="sidebar">
         <label><strong>VaporWeather™</strong></label>
@@ -39,9 +42,38 @@
         </div>
         
         <div class="five-day-forecast" id="fiveDayForecast">
-            
-            
+            <div class="five-day-item" id="day1">
+                <h4 id="date1">Day 1</h4>
+                <img id="img1" src="assets/temp.jpg" alt="Weather Icon" />
+                <p id="temp1"></p>
+                <p id="desc1"></p>
+            </div>
+            <div class="five-day-item" id="day2">
+                <h4 id="date2">Day 2</h4>
+                <img id="img2" src="assets/temp.jpg" alt="Weather Icon" />
+                <p id="temp2"></p>
+                <p id="desc2"></p>
+            </div>
+            <div class="five-day-item" id="day3">
+                <h4 id="date3">Day 3</h4>
+                <img id="img3" src="assets/temp.jpg" alt="Weather Icon" />
+                <p id="temp3"></p>
+                <p id="desc3"></p>
+            </div>
+            <div class="five-day-item" id="day4">
+                <h4 id="date4">Day 4</h4>
+                <img id="img4" src="assets/temp.jpg" alt="Weather Icon" />
+                <p id="temp4"></p>
+                <p id="desc4"></p>
+            </div>
+            <div class="five-day-item" id="day5">
+                <h4 id="date5">Day 5</h4>
+                <img id="img5" src="assets/temp.jpg" alt="Weather Icon" />
+                <p id="temp5"></p>
+                <p id="desc5"></p>
+            </div>
         </div>
+        
         
         <div class="sortingbutton">
             <button class="locationButton" id="ascButton">Ascending</button>
@@ -51,13 +83,20 @@
         
 
         <div class = "charts" id = "charts">
-            <div class="grid-item">Vertical Bar chart</div>
-            <div class="grid-item">Donut chart</div>
-            <div class="grid-item">Line chart</div>
+            <div class="grid-item">
+                <canvas id ="barchart" width="250" height="150""></canvas>
+            </div>
+            <div class="grid-item">
+                <canvas id="donut" width="250" height="150"></canvas>
+            </div>
+            <div class="grid-item">
+                <canvas id="line" width="250" height="150"></canvas>
+            </div>
         </div>
 
 
     </div>
     <script src = "script.js"></script>
+    <script src = "barchart.js"></script>
 </body>
 </html>
