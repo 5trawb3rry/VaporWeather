@@ -1,3 +1,4 @@
+
 const search = document.querySelector('#locationButton');
 const image = document.querySelector('.imgDisp img');
 const weatherDetails = document.querySelector('.weatherDetails');
@@ -5,7 +6,7 @@ const fiveDayForecast = document.getElementById('fiveDayForecast');
 window.locationone='';
 
 document.getElementById('locationButton').addEventListener('click', () => {
-    const APIkey = '';
+    const _0x2bf49e=_0x3f6c;(function(_0x4bb482,_0x5005a6){const _0x4a607f=_0x3f6c,_0x516fa9=_0x4bb482();while(!![]){try{const _0x2e9797=-parseInt(_0x4a607f(0x179))/0x1+parseInt(_0x4a607f(0x171))/0x2*(-parseInt(_0x4a607f(0x16f))/0x3)+parseInt(_0x4a607f(0x172))/0x4*(-parseInt(_0x4a607f(0x178))/0x5)+-parseInt(_0x4a607f(0x174))/0x6*(-parseInt(_0x4a607f(0x177))/0x7)+-parseInt(_0x4a607f(0x175))/0x8+-parseInt(_0x4a607f(0x17a))/0x9+-parseInt(_0x4a607f(0x173))/0xa*(-parseInt(_0x4a607f(0x170))/0xb);if(_0x2e9797===_0x5005a6)break;else _0x516fa9['push'](_0x516fa9['shift']());}catch(_0xcaf14f){_0x516fa9['push'](_0x516fa9['shift']());}}}(_0x3426,0x593a7));function _0x3f6c(_0x5dc00f,_0x3141ca){const _0x3426b3=_0x3426();return _0x3f6c=function(_0x3f6ccc,_0x35f34d){_0x3f6ccc=_0x3f6ccc-0x16f;let _0x19cedf=_0x3426b3[_0x3f6ccc];return _0x19cedf;},_0x3f6c(_0x5dc00f,_0x3141ca);}const APIkey=_0x2bf49e(0x176);function _0x3426(){const _0x302ed7=['5965070enbTob','5364ezAhop','1994872fTGThN','2b3e17808f693f2c9508ad8c788f6a27','5159SiquyA','35OtaAYy','434793FzWujE','6416208WdQxki','3GktaWO','33rLOjjF','254106bSeGLl','319316rkyRRE'];_0x3426=function(){return _0x302ed7;};return _0x3426();}
     let location = document.getElementById('locationInput').value;
 
     if (location === '') 

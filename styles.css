@@ -1,19 +1,19 @@
-body {
+body
+{
     font-family: Helvetica;
     margin: 0;
     padding: 0;
-    background-image: url('bg1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
-    backdrop-filter: blur(5px);
+    display: flex; /* Allows the body to stretch the full viewport height */
+    flex-direction: column;
+    flex:1;
 }
+
 
 .sidebar
 {
     width:150px;
-    height: 100vh;
+    height: 136vh;
     background-color: (0,0,0,0.5);
     display: flex;
     flex-direction: column;
@@ -41,18 +41,45 @@ body {
     border-radius: 5px;
 }
 
+.profile-icon 
+{
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+}
+
+.profile-icon img
+{
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+
+
 .mainContent
 {
+    flex-direction: column;
     flex: 1;  
     display: flex;
     justify-content: center;  
     align-items: center;  
+    background-image: url('assets/bg1.jpg');
+    background-size: cover; /* This ensures the background covers the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .sidebar label
 {
   font-size: large;
   padding:10px
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px; 
 }
 
 .locationInput
@@ -71,3 +98,264 @@ body {
     border: 1px solid #0e2548;   
 }
 
+.locationButton
+{
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    border: 1px solid #6d6471;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
+
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;   
+}
+
+
+
+.weatherDisp {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 900px;
+    height: 250px;
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 10px;
+    border: 1px solid #0e2548; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.imgDisp {
+    width: 150px; 
+    height: 150px; 
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-right: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgDisp img 
+{
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+.weatherDetails 
+{
+    flex-grow: 1; 
+    text-align: left; 
+    margin-left: 50px;
+}
+
+.charts
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    color: white;
+    width: 900px;
+    height:250px;
+    margin-left: 200px;
+    margin-top: 20px;
+    border: 1px solid #0e2548; 
+    border-radius: 10px;
+}
+
+.grid-item 
+{
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #0e2548; 
+    color: white;
+    text-align: center;
+}
+
+.description
+{
+    font-family: Helvetica;
+    font-size: large;
+    text-transform: capitalize;
+}
+
+.five-day-forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for 5 days */
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    color: white;
+    width: 900px;
+    height: auto;
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    border: 1px solid #0e2548; 
+    border-radius: 10px;
+}
+
+.five-day-item {
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #0e2548; 
+    color: white;
+    text-align: center;
+}
+
+.five-day-item img 
+{
+    width: 50px; 
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+.five-day-item
+{
+    text-align: center; 
+    padding: 10px; 
+}
+
+.imgDisp img {
+    transition: opacity 0.5s ease;
+    opacity: 0; 
+}
+
+.imgDisp img.show
+{
+    opacity: 1; 
+}
+
+.sortingbutton {
+    display: flex;
+    flex-direction: row;
+    width: 60%; 
+    gap: 10px; 
+}
+
+.chart 
+{
+    width: 10px;  
+    height: 50px;
+}
+
+
+/* smaller screen*/
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100px;
+        padding: 10px;
+    }
+
+    .sidebar a {
+        font-size: medium;
+        padding: 10px;
+    }
+
+    .locationInput {
+        width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .locationButton {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .weatherDisp {
+        width: 100%;
+        margin-left: 0;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .imgDisp {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .weatherDetails {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .charts {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .five-day-forecast {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .five-day-item {
+        padding: 10px;
+    }
+
+    .sortingbutton {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .mainContent {
+        padding: 20px;
+        background-size: contain;
+    }
+}
+
+/*for medium screen*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .sidebar {
+        width: 120px;
+        padding: 15px;
+    }
+
+    .sidebar a {
+        font-size: large;
+    }
+
+    .locationInput {
+        width: 80%;
+    }
+
+    .locationButton {
+        width: 80%;
+    }
+
+    .weatherDisp {
+        width: 80%;
+    }
+
+    .charts {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .five-day-forecast {
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+    }
+
+    .sortingbutton {
+        width: 80%;
+    }
+}

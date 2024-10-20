@@ -1,23 +1,24 @@
-body {
+body
+{
     font-family: Helvetica;
     margin: 0;
     padding: 0;
-    background-image: url('bg1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
-    backdrop-filter: blur(5px);
+    display: flex; 
+    flex-direction: column;
+    flex:1;
 }
 
-.sidebar {
-    width: 150px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+
+.sidebar
+{
+    width:150px;
+    height: 136vh;
+    background-color: (0,0,0,0.5);
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
+    top:0;
     left: 0;
     padding: 20px;
     border: 2px solid #6d6471;
@@ -51,13 +52,18 @@ body {
     border-radius: 50%; 
 }
 
-.mainContent {
+.mainContent
+{
     flex-direction: row;
     flex: 1;  
     display: flex;
-    justify-content: flex-start;  
-    align-items: flex-start;  
-    margin-left: 200px; /* Prevent overlapping with the sidebar */
+    justify-content: center;  
+    align-items: center;  
+    background-image: url('assets/bg1.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 .sidebar label {
@@ -75,6 +81,7 @@ body {
     height: 600px;
     margin-top: 70px;
     border: none;
+    margin-left: 200px;
 }
 
 .grid-item {
@@ -146,4 +153,207 @@ body {
     background-color: rgba(255, 255, 255, 0.3);  
     border: 1px solid #0e2548;
     resize: vertical; 
+}
+
+.tableButton
+{   
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    border: 1px solid #6d6471;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px; 
+    margin-left: 200px; 
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;  
+}
+
+#forecast-table 
+{
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+#forecast-table th, #forecast-table td 
+{
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+#forecast-table th
+{
+    font-family: Helvetica;
+    font-weight: bold; 
+}
+
+#forecast-table td 
+{
+    border-left: none; 
+    border-right: none; 
+}
+
+.grid-item 
+{
+    padding: 10px; 
+}
+
+#output 
+{
+    height: 490px;
+    width: 95%; 
+}
+
+
+
+/*large screen*/
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .sidebar a 
+    {
+        padding: 10px;
+        font-size: medium;
+    }
+
+    .mainContent 
+    {
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .table
+    {
+        grid-template-columns: 1fr;
+        width: 80%; 
+        margin-left: 20px; 
+        margin-top: 20px;
+    }
+
+    .grid-item {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    #output
+    {
+        width: 100%; 
+    }
+
+    .tableButton 
+    {
+        margin-left: 20px; 
+    }
+}
+
+/*mobile phone*/
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 5px;
+    }
+
+    .sidebar a {
+        padding: 5px;
+        font-size: small;
+    }
+
+    .profile-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mainContent 
+    {
+        padding: 5px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .table 
+    {
+        grid-template-columns: 1fr; 
+        width: 95%; 
+        margin-left: 10px; 
+        margin-top: 10px;
+    }
+
+    .grid-item 
+    {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #output 
+    {
+        height: 300px; 
+        width: 100%;
+    }
+
+    .tableButton {
+        margin-left: 10px;
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/*smaller screen*/
+@media (max-width: 480px) 
+{
+    .sidebar 
+    {
+        width: 60px;
+        padding: 5px;
+    }
+
+    .sidebar a 
+    {
+        padding: 3px;
+        font-size: smaller;
+    }
+
+    .profile-icon img 
+    {
+        width: 25px;
+        height: 25px;
+    }
+
+    .mainContent 
+    {
+        padding: 5px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .table 
+    {
+        grid-template-columns: 1fr; 
+        width: 100%;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .grid-item 
+    {
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    #output 
+    {
+        height: 250px;
+        width: 100%;
+    }
+
+    .tableButton 
+    {
+        margin-left: 5px;
+        font-size: 12px;
+        padding: 5px;
+    }
 }
