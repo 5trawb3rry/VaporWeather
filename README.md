@@ -1,1 +1,1 @@
-A weather website that uses openweather API, script.js is for the main api working, script2 is for gemini, and barchart.js is for the 3 weather charts. Be sure to include your own API key in the script and script2 files. Api keys for gemini and open weather
+A weather website that uses openweather API, script.js is for the main api working, script2 is for gemini, and barchart.js is for the 3 weather charts. Be sure to include your own API key in the script and script2 files (Api keys for gemini and open weather)
